@@ -4,6 +4,16 @@
 from sys import argv
 import re
 
+"""
+Given: At most 10 DNA strings in FASTA format (of length at most 1 kbp each).
+
+Return: The ID of the string having the highest GC-content, followed by the
+GC-content of that string.
+"""
+
+
+__author__ = "Ethan Hart"
+
 
 def read_data(data_file):
     with open(data_file, 'r') as inf:

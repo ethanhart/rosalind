@@ -3,8 +3,14 @@
 
 from sys import argv
 
-with open(argv[1], 'r') as inf:
-    data = inf.read()
+"""
+Given: A DNA string t having length at most 1000 nt.
+
+Return: The transcribed RNA string of t.
+"""
+
+__author__ = "Ethan Hart"
+
 
 def dna2rna(dna):
     """
@@ -16,4 +22,13 @@ def dna2rna(dna):
 
     return rna.strip()
 
-print dna2rna(data)
+
+def main():
+    with open(argv[1], 'r') as inf:
+        dna = inf.read().strip()
+
+    rna = dna2rna(dna)
+    print rna
+
+if __name__ == "__main__":
+    main()

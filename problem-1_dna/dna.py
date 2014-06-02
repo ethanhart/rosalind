@@ -3,6 +3,16 @@
 
 from sys import argv
 
+"""
+Given: A DNA string s of length at most 1000 nt.
+
+Return: Four integers (separated by spaces) counting the respective number of
+        times that the symbols 'A', 'C', 'G', and 'T' occur in s.
+"""
+
+__author__ = "Ethan Hart"
+
+
 def read_data(data_file):
     with open(data_file, 'r') as inf:
         lines = inf.read()

@@ -3,8 +3,13 @@
 
 from sys import argv
 
-with open(argv[1], 'r') as inf:
-    data = inf.read().strip()
+"""
+Given: A DNA string s of length at most 1000 bp.
+
+Return: The reverse complement sc of s.
+"""
+
+__author__ = "Ethan Hart"
 
 
 def reverse_compliment(data):
@@ -19,4 +24,14 @@ def reverse_compliment(data):
 
     return ''.join(new_sequence)
 
-print reverse_compliment(data)
+
+def main():
+    with open(argv[1], 'r') as inf:
+        dna = inf.read().strip()
+
+    rc = reverse_compliment(dna)
+    print rc
+
+
+if __name__ == "__main__":
+    main()

@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-# Each codon consists of three nucleotides.
-# Go though an RNA sequence three nucleotides at a time
-# and replace the RNA nucleotides with the corresponding
-# amino acid. This will produce a protein string.
-
 from sys import argv
 
+"""
+Given: An RNA string s corresponding to a strand of mRNA (of length at most 10
+kbp).
+
+Return: The protein string encoded by s.
+"""
+
 __author__ = "Ethan Hart"
+
 
 # RNA codon to protein lookup table
 rna_codon_table = {'UUU': 'F',
