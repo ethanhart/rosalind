@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from sys import argv
-
 """
 Given: A DNA string t having length at most 1000 nt.
 
 Return: The transcribed RNA string of t.
 """
+
+from sys import argv
 
 __author__ = "Ethan Hart"
 

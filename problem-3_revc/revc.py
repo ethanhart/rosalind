@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from sys import argv
-
 """
 Given: A DNA string s of length at most 1000 bp.
 
 Return: The reverse complement sc of s.
 """
+
+from sys import argv
 
 __author__ = "Ethan Hart"
 

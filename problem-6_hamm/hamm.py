@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from sys import argv
-
 """
 Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
 
 Return: The Hamming distance dH(s,t).
 """
+
+from sys import argv
 
 __author__ = "Ethan Hart"
 

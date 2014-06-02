@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from sys import argv
-
 """
 Given: An RNA string s corresponding to a strand of mRNA (of length at most 10
 kbp).
 
 Return: The protein string encoded by s.
 """
+
+from sys import argv
 
 __author__ = "Ethan Hart"
 
