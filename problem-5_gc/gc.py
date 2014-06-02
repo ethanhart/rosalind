@@ -21,7 +21,7 @@ def read_data(data_file):
     return data
 
 
-def extract_sequence(data):
+def extract_sequence_from_fasta(data):
     """
     Extract DNA sequence from the following format
     >ID1
@@ -31,11 +31,11 @@ def extract_sequence(data):
     """
 
     data = re.sub('\s+', '', data)
-    matches = re.findall('>Rosalind_[0-9]{4}[AGCT]+', data)
+    matches = re.findall('>Rosalind_[0-9]{1,}[ACGT]+', data)
     sequences = {}
     for i in matches:
-        seq_id = i[1:14]
-        dna = i[14:]
+        seq_id = re.findall('Rosalind_[0-9]{1,}', i)[0]
+        dna = re.findall('[ACGT]+', i)[0]
         sequences[seq_id] = dna
 
     return sequences
@@ -59,7 +59,7 @@ def gc_content(data):
 def main():
     data_file = argv[1]
     data = read_data(data_file)
-    sequences = extract_sequence(data)
+    sequences = extract_sequence_from_fasta(data)
 
     gc_percentages = {}
     for k, v in sequences.items():
