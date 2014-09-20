@@ -22,8 +22,8 @@ def rabbits(n, k):
             fib_seq.append(1)
         else:
             adults = fib_seq[-1]     # Previous month's rabbits are all adults
-            babys = fib_seq[-2] * k  # All rabbits from 2 months ago have babys
-            fib_seq.append(adults + babys)
+            babies = fib_seq[-2] * k  # All rabbits from 2 months ago have babies
+            fib_seq.append(adults + babies)
 
     return fib_seq[-1]
 
